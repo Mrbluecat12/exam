@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #EEEFF1;
+    font-family: sans-serif;
+}
+
+.container {
+    max-width: 1240px;
+    margin: auto;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    gap: 40px;
+    flex: 1;
+    margin-left: 40px;
+    list-style: none;
+}
+
+.nav li {
+    list-style: none;
+}
+
+.nav a {
+    color: #000;
+}
+
+.header .search-input {
+    width: 220px;
+    max-width: 100%;
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: 1px solid #999494;
+    background: #EEEFF1;
+    margin: 0 20px;
+}
+
+.shop-container {
+    max-width: 1240px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    gap: 40px;
+}
+
+.sidebar {
+    width: 160px;
+    flex-shrink: 0;
+}
+
+.sidebar h3 {
+    margin-bottom: 20px;
+}
+
+.categories {
+    list-style: none;
+}
+
+.categories li {
+    margin-bottom: 12px;
+}
+
+.categories a {
+    color: #000;
+    text-decoration: none;
+    display: block;
+    padding: 6px 0;
+}
+
+.yt {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.ka {
+    width: min(100%, 300px);
+    background: rgb(247, 243, 243);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.ka img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+}
+
+.ka-text {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.cho {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.ch {
+    position: relative;
+    width: min(100%, 300px);
+}
+
+.ch img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.ch a {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+}
+
+.product-image {
+    position: relative;
+    aspect-ratio: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #000;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    z-index: 1;
+}
+
+.ka-text h1 {
+    padding: 12px 12px 4px;
+    line-height: 1.4;
+    min-height: 34px;
+    color: #000000;
+    font-size: 16px;
+}
+
+.ka-text p {
+    padding: 0 12px;
+    margin-bottom: 4px;
+    color: #636363;
+    font-size: 13px;
+}
+
+.ka-text .color {
+    color: #929191;
+    margin-top: 4px;
+}
+
+.ka-text span {
+    color: #000;
+    padding: 8px 12px 12px;
+    display: block;
+    margin-top: 4px;
+    font-weight: 600;
+}
+
+.konec-yra {
+    margin-top: 60px;
+    width: 100%;
+    background: #000000;
+    color: #fff;
+    padding: 60px 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+.col {
+    width: min(100%, 280px);
+}
+
+.col h4 {
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.col p {
+    font-size: 12px;
+    color: #aaa;
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+.col p:hover {
+    color: #fff;
+}
+
+@media (max-width: 980px) {
+    .container {
+        padding: 16px;
+    }
+
+    .header {
+        justify-content: center;
+    }
+
+    .kross {
+        margin-top: 40px;
+    }
+
+    .konec-yra {
+        padding: 40px 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .kross-text h1 {
+        font-size: 34px;
+    }
+
+    .btns {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .yt,
+    .cho {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .ka,
+    .ch {
+        width: 100%;
+        max-width: 340px;
+    }
+
+    .konec-yra {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 30px 20px;
+    }
+
+    .col {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 12px;
+    }
+
+    .kross-text h1 {
+        font-size: 28px;
+    }
+
+    .kross-text p,
+    .nav a,
+    .col p {
+        font-size: 13px;
+    }
+
+    .btn {
+        padding: 12px 18px;
+    }
+
+    .konec-yra {
+        padding: 25px 16px;
+    }
+
+    .nav {
+        gap: 10px;
+    }
+}
