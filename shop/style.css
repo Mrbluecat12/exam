@@ -225,6 +225,10 @@ body {
     color: #fff;
 }
 
+a {
+    text-decoration: none;
+}
+
 @media (max-width: 980px) {
     .container {
         padding: 16px;

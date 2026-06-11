@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alowishus</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
     <header class="header">
-
         <a href="#" class="logo">
             <img src="imgs/Frame.png" alt="">
         </a>
@@ -24,16 +24,28 @@
             <li><a href="registr/registration.html">SNKRS</a></li>
         </ul>
 
-    <input class="search-input" type="search" placeholder="Search...">
+        <input class="search-input" type="search" placeholder="Search...">
 
-<div class="icons">
-    <a href="registr/registration.html"><img src="imgs/heart.png" alt="heart"></a>
-    <a href="shop/shop.html"><img src="imgs/shop.png" alt="shop"></a>
-</div>
-
+        <div class="icons">
+            <a href="registr/registration.html"><img src="imgs/heart.png" alt="heart"></a>
+            <a href="shop/shop.html"><img src="imgs/shop.png" alt="shop"></a>
+        </div>
+    </header> 
 
     <section class="kross">
-        <img src="imgs/Image (1).png" alt="" class="kross-img">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="imgs/Image (1).png" alt="Slide 1"></div>
+                <div class="swiper-slide"><img src="imgs/Image (1).png" alt="Slide 2"></div>
+                <div class="swiper-slide"><img src="imgs/Image (1).png" alt="Slide 3"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <div class="swiper-scrollbar"></div>
+        </div>
 
         <div class="kross-text">
             <span>First Look</span>
@@ -98,11 +110,9 @@
             <a href="#The Essentials ">Kids'</a>
         </div>
     </section>
-
-</div>
+</div> 
 
 <footer class="konec-yra">
-
     <div class="col">
         <h4>FIND A STORE</h4>
         <p>BECOME A MEMBER</p>
@@ -127,9 +137,10 @@
         <p>Careers</p>
         <p>Investors</p>
         <p>Sustainability</p>
-    </div>
-
+    </div> 
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="script.js"></script> 
 </body>
 </html>
