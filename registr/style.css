@@ -204,18 +204,37 @@ button {
 
 @media (max-width: 768px) {
     .header {
-        flex-direction: column;
-        align-items: stretch;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    .nav {
+    .header .logo {
+        flex: 0 0 100%;
+        display: flex;
+        justify-content: center;
+        order: 1;
+    }
+
+    .header .nav {
+        flex: 0 0 100%;
         justify-content: center;
         gap: 12px;
+        order: 2;
     }
 
-    .search-input {
-        width: 100%;
-        max-width: 420px;
+    .header .search-input {
+        flex: 1;
+        max-width: 240px;
+        order: 3;
+        margin-top: 10px;
+    }
+
+    .header .icons {
+        order: 4;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
     }
 
     .op {

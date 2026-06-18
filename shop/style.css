@@ -1,6 +1,7 @@
 * {
-    
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -11,7 +12,7 @@ body {
 .container {
     max-width: 1240px;
     margin: auto;
-    padding: 20px;
+    padding: 0 20px;
 }
 
 .header {
@@ -23,9 +24,9 @@ body {
 .nav {
     display: flex;
     gap: 40px;
-    flex: 1;
     margin-left: 40px;
     list-style: none;
+    padding: 0;
 }
 
 .nav li {
@@ -36,6 +37,17 @@ body {
     color: #000;
 }
 
+.search-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 .header .search-input {
     width: 220px;
     max-width: 100%;
@@ -43,7 +55,7 @@ body {
     border-radius: 999px;
     border: 1px solid #999494;
     background: #EEEFF1;
-    margin: 0 20px;
+    margin: 0 20px 0 0;
 }
 
 .shop-container {
@@ -81,27 +93,54 @@ body {
 .yt {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start; 
     gap: 30px;
-    margin-top: 30px;
+    flex: 1;
 }
 
 .ka {
-    width: min(100%, 300px);
-    background: rgb(247, 243, 243);
-    border-radius: 12px;
+    width: calc(33.333% - 20px);
+    min-width: 240px;
+    max-width: 300px;
+    background: #fff;
+    border-radius: 4px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .ka img {
     width: 100%;
+    height: auto;
     display: block;
-    border-radius: 12px;
+    object-fit: cover;
 }
 
 .ka-text {
-    margin-top: 10px;
-    text-align: left;
+    padding: 12px; 
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.ka-text h2 {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.ka-text .category {
+    color: #757575;
+    font-size: 14px;
+}
+
+.ka-text .price {
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 8px;
 }
 
 .cho {
@@ -164,43 +203,15 @@ body {
     z-index: 1;
 }
 
-.ka-text h1 {
-    padding: 12px 12px 4px;
-    line-height: 1.4;
-    min-height: 34px;
-    color: #000000;
-    font-size: 16px;
-}
-
-.ka-text p {
-    padding: 0 12px;
-    margin-bottom: 4px;
-    color: #636363;
-    font-size: 13px;
-}
-
-.ka-text .color {
-    color: #929191;
-    margin-top: 4px;
-}
-
-.ka-text span {
-    color: #000;
-    padding: 8px 12px 12px;
-    display: block;
-    margin-top: 4px;
-    font-weight: 600;
-}
-
 .konec-yra {
     margin-top: 60px;
     width: 100%;
-    background: #000000;
+    background: #111111;
     color: #fff;
     padding: 60px 40px;
     display: flex;
     justify-content: space-between;
-    gap: 100px;
+    gap: 40px;
     flex-wrap: wrap;
 }
 
@@ -211,11 +222,12 @@ body {
 .col h4 {
     font-size: 13px;
     margin-bottom: 15px;
+    letter-spacing: 0.5px;
 }
 
 .col p {
     font-size: 12px;
-    color: #aaa;
+    color: #7e7e7e;
     margin: 8px 0;
     cursor: pointer;
 }
@@ -249,12 +261,27 @@ a {
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
-        align-items: stretch;
+        align-items: center;
+        gap: 15px;
     }
 
     .nav {
+        margin-left: 0;
         justify-content: center;
         gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .search-wrapper {
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .header .search-input {
+        margin: 0;
+        flex: 1;
+        max-width: 240px;
     }
 
     .kross-text h1 {
