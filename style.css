@@ -7,6 +7,7 @@
 body {
     background: #EEEFF1;
     font-family: sans-serif;
+    overflow-x: hidden;
 }
 
 .container {
@@ -23,6 +24,15 @@ body {
     gap: 20px;
 }
 
+.header .search-input {
+    width: 220px;
+    max-width: 100%;
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: 1px solid #999494;
+    background: #ffffff;
+}
+
 .header .icons {
     display: flex;
     align-items: center;
@@ -37,9 +47,10 @@ body {
 }
 
 .nav {
+    list-style: none;
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 20px 30px;
     justify-content: center;
 }
 
@@ -47,7 +58,7 @@ body {
     color: #000;
     text-decoration: none;
     font-size: 14px;
-    white-space: nowrap;
+    display: inline-block;
 }
 
 .kross {
@@ -62,6 +73,7 @@ body {
 
 .swiper {
     width: 100%;
+    border-radius: 12px;
 }
 
 .swiper-slide img {
@@ -71,13 +83,15 @@ body {
 }
 
 .kross-text {
-    margin-top: 30px;
+    margin-top: 20px;
     max-width: 720px;
+    width: 100%;
 }
 
 .kross-text h1 {
-    font-size: 48px;
+    font-size: clamp(28px, 5vw, 48px);
     margin: 15px 0;
+    line-height: 1.2;
 }
 
 .kross-text p {
@@ -87,22 +101,13 @@ body {
     line-height: 1.6;
 }
 
-.header .search-input {
-    width: 220px;
-    max-width: 100%;
-    padding: 10px 16px;
-    border-radius: 999px;
-    border: 1px solid #999494;
-    background: #ffffff;
-    margin-top: 10px;
-}
-
 .btns {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 12px;
     margin-top: 20px;
+    width: 100%;
 }
 
 .btn {
@@ -111,8 +116,13 @@ body {
     color: #fff;
     padding: 12px 25px;
     border-radius: 30px;
-    margin: 5px;
     text-decoration: none;
+    text-align: center;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background: #333;
 }
 
 .title {
@@ -120,7 +130,7 @@ body {
     text-align: center;
 }
 
-.yt {
+.yt, .cho {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -128,12 +138,15 @@ body {
     margin-top: 30px;
 }
 
-.ka {
-    width: min(100%, 300px);
+.ka, .ch {
+    width: 100%;
+    max-width: 300px;
+    position: relative;
 }
 
-.ka img {
+.ka img, .ch img {
     width: 100%;
+    height: auto;
     display: block;
     border-radius: 12px;
 }
@@ -141,25 +154,6 @@ body {
 .ka-text {
     margin-top: 10px;
     text-align: left;
-}
-
-.cho {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 30px;
-}
-
-.ch {
-    position: relative;
-    width: min(100%, 300px);
-}
-
-.ch img {
-    width: 100%;
-    border-radius: 10px;
-    display: block;
 }
 
 .ch a {
@@ -173,96 +167,73 @@ body {
     text-decoration: none;
     color: #000;
     font-weight: 600;
+    white-space: nowrap;
 }
 
 .konec-yra {
     margin-top: 60px;
     background: #111;
     color: #fff;
-    padding:50px 40px;
-    max-width: 3000px;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 60px 0;
+    width: 100%;
+}
+
+.konec-yra .container {
     display: flex;
     justify-content: space-between;
-    gap: 60px;
+    align-items: flex-start;
+    gap: 30px;
     flex-wrap: wrap;
 }
 
 .col {
-    width: min(100%, 280px);
+    flex: 1;
+    min-width: 200px;
+    max-width: 320px;
 }
 
 .col h4 {
-    font-size: 13px;
+    font-size: 14px;
     margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .col p {
-    font-size: 12px;
+    font-size: 13px;
     color: #aaa;
     margin: 8px 0;
     cursor: pointer;
+    transition: color 0.2s;
 }
 
 .col p:hover {
     color: #fff;
 }
 
-
 @media (max-width: 980px) {
-    .container {
-        padding: 16px;
-    }
     .header {
         justify-content: center;
     }
     .kross {
-        margin-top: 40px;
-    }
-    .konec-yra {
-        padding: 40px 25px;
+        margin-top: 30px;
     }
 }
 
 @media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        align-items: center;
-    }
-    .nav {
-        justify-content: center;
-        gap: 12px;
-    }
-    .kross-text h1 {
-        font-size: 34px;
-    }
-    .btns {
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-    }
-    .yt, .cho {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-    .ka, .ch {
-        width: 100%;
-        max-width: 340px;
-    }
-    .konec-yra {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 30px 20px;
+    .konec-yra .container {
+        justify-content: flex-start;
+        gap: 30px;
     }
     .col {
-        width: 100%;
+        max-width: 45%;
+        flex: 1 1 40%;
     }
-    .swiper {
-        width: 100%;
-        height: 300px;
+    .ka, .ch {
+        max-width: 220px;
+    }
+    .yt, .cho {
+        gap: 15px;
     }
 }
 
@@ -270,22 +241,30 @@ body {
     .container {
         padding: 12px;
     }
-    .kross-text h1 {
-        font-size: 28px;
-    }
-    .kross-text p, .nav a, .col p {
-        font-size: 13px;
-    }
-    .btn {
-        padding: 12px 18px;
-    }
-    .konec-yra {
-        padding: 25px 16px;
+    .header {
+        flex-direction: column;
+        gap: 15px;
     }
     .nav {
-        gap: 10px;
+        gap: 12px;
     }
-    .swiper {
-        height: 220px;
+    .btns {
+        flex-direction: column;
+    }
+    .btn {
+        width: 100%;
+    }
+    .col {
+        max-width: 100%;
+        flex: none;
+        text-align: left;
+    }
+    .yt, .cho {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .ka, .ch {
+        max-width: 100%;
     }
 }

@@ -39,7 +39,7 @@
     </header>
 </div>
 
-<div class="login">
+<form class="login" action="#" method="POST">
 
     <img src="imgs/Frame.png" class="logo">
 
@@ -49,13 +49,13 @@
         NIKE
     </h1>
 
-    <input type="email" placeholder="Email address">
-    <input type="password" placeholder="Password">
+    <input type="email" placeholder="Email address" required>
+    <input type="password" placeholder="Password" required>
 
     <div class="op">
         <div class="left">
-            <input type="checkbox" checked>
-            <span>Keep me signed in</span>
+            <input type="checkbox" id="keep-signed" checked>
+            <label for="keep-signed">Keep me signed in</label>
         </div>
 
         <a href="#">Forgotten your password?</a>
@@ -68,13 +68,13 @@
         <a href="#">Terms of Use</a>.
     </p>
 
-    <button>SIGN IN</button>
+    <button type="submit">SIGN IN</button>
 
     <p class="vhod">
         Not a Member? <a href="#">Join Us.</a>
     </p>
 
-</div>
+</form>
 
 <footer class="konec-yra">
 
